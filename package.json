@@ -1,0 +1,30 @@
+{
+    "name": "sinumbers",
+    "version": "0.1.0",
+    "description": "SI and IEC compatible large number parser/formatter module for node.js",
+    "author": "Michal Czapracki",
+    "contributors": [],
+    "homepage": "https://github.com/MichalCz/node-si-numbers",
+    "licenses":[{
+       "type":"MIT",
+       "url":"https://github.com/MichalCz/node-si-numbers/blob/master/LICENSE"
+    }],
+    "keywords" : [
+        "kilo", "mega", "giga", "tera", "peta", "exa", 
+        "IEC", "SI", "human readable", "large numbers"
+    ],
+    "engines": {
+        "node": ">= 0.2.0"
+    },
+    "bugs": {
+        "url": "http://github.com/MichalCz/node-agenda/issues"
+    },
+    "directories": {
+        "lib": "./lib"
+    },
+    "repository": { 
+        "type": "git",
+        "url" : "git://github.com/MichalCz/node-agenda.git"
+    },
+    "main": "./main.js"
+}
