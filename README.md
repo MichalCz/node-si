@@ -32,6 +32,23 @@ Now run it:
 
 Fairly straightforward I hope.
 
+Binary vs. decimal prefixes
+-----------------------------
+
+You may use either decimal or binary prefixing:
+
+	var si = require('si'), 
+		binNum = 8 << 20,
+		decNum = 8e6;
+		
+	console.log(si.si.format(binNum) + 'bytes vs. ' + si.bin.format(binNum) + 'bytes'); 
+	// will output: 8.338Mbytes vs. 8Mbytes
+
+	console.log(si.si.format(decNum) + 'bytes vs. ' + si.bin.format(decNum) + 'bytes'); 
+	// will output: 8Mbytes vs. 7.629Mbytes
+
+This might be quite handy for reading command line numbers like bitrate or byte offsets in files.
+
 Future
 --------
 
