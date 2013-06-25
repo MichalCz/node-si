@@ -12,6 +12,11 @@ exports.si = require('./lib/si');
 exports.bin = require('./lib/bin');
 
 /**
+ * Human readable time (timestamp to hms)
+ */
+exports.hms = require('./lib/hms');
+
+/**
  * Returns human readable number representation (up to nY - 1e24).
  * @param {Number} number
  * @returns {String}
