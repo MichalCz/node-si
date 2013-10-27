@@ -1,6 +1,6 @@
 {
     "name": "si",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "description": "SI and IEC compatible large number parser/formatter module for node.js",
     "author": "Michal Czapracki",
     "contributors": [],
