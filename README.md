@@ -2,7 +2,10 @@ Node Si
 =========
 
 The goal of this project is to provide a simple module that parses and formats
-numbers to be human readable - like "10gb" -> 1e10.
+numbers to be human readable - like:
+* "10gb" -> 1e10 
+* "4 days 7:30:01.444" -> 372601.444
+* "64Kb" -> 65536
 
 This might be especially useful in command line arguments and configuration 
 directives where you don't want the user to pass the whole number or use the 
@@ -32,6 +35,30 @@ Now run it:
 
 Fairly straightforward I hope.
 
+Time intervals
+----------------
+
+As of version 2.0.0 you can use node-si to read time intervals. In 2.0.0 only
+"n days hh:mm:dd" format is recognized.
+
+To read it, use something like this:
+
+    var hms = require('si').hms, 
+        time = si.parse(process.argv.slice(2).join(' '));
+
+    console.log('This program will self destruct in ' + hms.format(time));
+    setTimeout(function() { console.log('thanks for waiting...'); }, time);
+
+Should you want to format the time on the other hand:
+
+    var hms = require('si').hms,
+        time = +process.argv[2];
+
+    console.log('This program will self destruct in ' + hms.format(time));
+    setTimeout(function() { console.log('thanks for waiting...'); }, time);
+
+More implementations will follow (see "Future").
+
 Binary vs. decimal prefixes
 -----------------------------
 
@@ -54,9 +81,14 @@ Future
 
 I will be bringing some more parsers/formatters in later releases, like:
 
+Numbers:
 * IEC compliant binary multipliers like "MiB"
 * Case sensitive Mbytes/mbytes (decimal vs. binary)
 * Fractional SI multipliers like centi/mili etc.
+
+Time:
+* ISO 8601 time intervals (P1Y2M10DT2H30M/2008-05-11T15:30:00Z)
+* Reading days and months
 
 Feel free to post feature requests in issues. :)
 
