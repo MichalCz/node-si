@@ -10,6 +10,7 @@
        "url":"https://github.com/MichalCz/node-si/blob/master/LICENSE"
     }],
     "keywords" : [
+        "time", "days", "cron", "interval", "hours", "minutes", 
         "kilo", "mega", "giga", "tera", "peta", "exa", 
         "IEC", "SI", "human readable", "large numbers"
     ],
